@@ -14,8 +14,8 @@ import SwiftUI
 struct FocusPlugApp: App {
     @StateObject private var appState = AppState()
     @StateObject private var timerManager = TimerManager()
-    @StateObject private var blockerService = BlockerService()
-    @StateObject private var musicPlayer = MusicPlayer()
+    @StateObject private var blockerService = WebsiteBlockerService()
+    @StateObject private var musicPlayer = MusicPlayerService()
     @StateObject private var statsManager = StatsManager()
     
     var body: some Scene {

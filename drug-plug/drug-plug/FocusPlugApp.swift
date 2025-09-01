@@ -28,7 +28,6 @@ struct FocusPlugApp: App {
                     timerManager.setupNotifications()
                 }
         }
-        .windowResizability(.contentMinSize)
         .defaultSize(width: 600, height: 700)
         .windowMinimumSize(width: 400, height: 500)
         

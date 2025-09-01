@@ -7,3 +7,25 @@
 
 
 /Users/romagnoli/Documents/drug-plug/drug-plug/FocusPlugApp.swift:32:10 Value of type 'some Scene' has no member 'windowMinimumSize'
+
+import SwiftUI
+
+@main
+struct FocusPlugApp: App {
+    @StateObject private var appState = AppState()
+    @StateObject private var timerManager = TimerManager()
+    @StateObject private var blockerService = BlockerService()
+    @StateObject private var musicPlayer = MusicPlayer()
+    @StateObject private var statsManager = StatsManager()
+    
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(appState)
+                .environmentObject(timerManager)
+                .environmentObject(blockerService)
+                .environmentObject(musicPlayer)
+                .environmentObject(statsManager)
+        }
+    }
+}
